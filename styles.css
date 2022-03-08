@@ -39,6 +39,7 @@ main {
     grid-template-areas:
         "logo"
         "about"
+        "titles"
         "calculator"
         "results"
         "user"
@@ -53,6 +54,15 @@ main {
 h1 { grid-area: logo;}
 .test1  { grid-area: about;}
 .test2 {grid-area: info;}
+.input-titles {
+    grid-area: titles;
+    display: grid;
+    grid-template-areas: 
+    "mark weight credit";
+
+    align-items: center;
+    justify-items: center;
+}
 
 /*
 .grade-div {
@@ -160,7 +170,7 @@ h1 { grid-area: logo;}
     opacity: 0;
 }
 
-.grade-div, .grade-button, .results-div {
+.grade-div, .grade-button, .results-div, .input-titles {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,3 +237,14 @@ h1 { grid-area: logo;}
     transform: scale(1.1);
 }
 
+#mark {
+    grid-area: mark;
+}
+
+#weight {
+    grid-area: weight;
+}
+
+#credit {
+    grid-area: credit;
+}
