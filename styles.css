@@ -49,28 +49,19 @@ main {
     justify-items: center;
 }
 
-
-
 h1 { grid-area: logo;}
 .test1  { grid-area: about;}
 .test2 {grid-area: info;}
+
 .input-titles {
-    grid-area: titles;
+    /*grid-area: titles;*/
     display: grid;
+    margin-left: -104px;
+    grid-template-columns: 202px 202px 68px;
     grid-template-areas: 
-    "mark weight credit";
-
-    align-items: center;
-    justify-items: center;
+    "mark gweight credit";
+    
 }
-
-/*
-.grade-div {
-    grid-area: calculator;
-    align-items: center;
-    justify-items: center;
-}
-*/
 
 /*-- Navbar */
 .navbar{
@@ -170,7 +161,7 @@ h1 { grid-area: logo;}
     opacity: 0;
 }
 
-.grade-div, .grade-button, .results-div, .input-titles {
+.grade-div, .grade-button, .results-div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,14 +228,17 @@ h1 { grid-area: logo;}
     transform: scale(1.1);
 }
 
-#mark {
+.title-mark {
     grid-area: mark;
+    text-align: center;
 }
 
-#weight {
-    grid-area: weight;
+.title-weight {
+    grid-area: gweight;
+    text-align: center;
 }
 
-#credit {
+.title-credit {
     grid-area: credit;
+    text-align: center;
 }

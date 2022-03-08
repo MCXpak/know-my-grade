@@ -1,20 +1,11 @@
-//document.getElementsByClassName("add-grade")[0].onclick = function () {
-
 const grInputs = ["grInput1"];
 
 let grInputCounter = 1;
 
 function addGradeInputs(parentGrInput){
     grInputCounter += 1;
-    //var elements = document.getElementsByClassName("grade-div");
-    //var arr = Array.from(elements);
-    //console.log(arr);
-    //console.log(clicked_id)
-    //console.log("hi");
-    //console.log(grInputCounter.toString())
+
     let parent = document.getElementById(parentGrInput);
-    //let parent_id = parent.id;
-    //console.log("Parent: " + parent_id);
     var ok = true;
     if (ok === true) {
         var gradeDiv = document.createElement("div");
@@ -46,25 +37,10 @@ function addGradeInputs(parentGrInput){
 
         addGradeDiv.innerHTML = '<button class="add-grade" onclick=addGradeInputs("'+ grInput +'")><i class="fa-solid fa-plus"></i></button></div>'
         minusGradeDiv.innerHTML = '<button class="minus-grade" onclick=removeGradeInputs("'+ grInput +'")><i class="fa-solid fa-minus"></i></button>'
-        //var addGradeBtn = document.createElement("button");
-        //var minusGradeBtn = document.createElement("button");
-        //addGradeBtn.className = "add-grade"
-        //addGradeBtn.onclick = function() {addGradeInputs(grInput)};
-        //minusGradeBtn.className = "minus-grade"
-
-        //var plus = document.createElement("i");
-        //var minus = document.createElement("i");
-        //plus.className = "fa-solid fa-plus";
-        //minus.className = "fa-solid fa-minus";
-
-        //addGradeBtn.appendChild(plus);
-        //minusGradeBtn.appendChild(minus);
-
+        
         inputs.appendChild(markInput);
         inputs.appendChild(weightInput);
         inputs.appendChild(creditInput);
-        //addGradeDiv.appendChild(addGradeBtn);
-        //minusGradeDiv.appendChild(minusGradeBtn);
 
         gradeDiv.appendChild(inputs);
         gradeDiv.appendChild(addGradeDiv);
@@ -72,12 +48,6 @@ function addGradeInputs(parentGrInput){
         
         gradeDiv.id = grInput;
         console.log("New ID: " + gradeDiv.id)
-        //body.main.appendChild(gradeDiv);
-                
-        //div.style.backgroundColor = "black";
-
-        //clicked_id.nextSibling = gradeDiv;
-        //document.getElementById("grades").appendChild(gradeDiv);
         
         grades.insertBefore(gradeDiv, parent)
     }
