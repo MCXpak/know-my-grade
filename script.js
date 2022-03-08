@@ -49,13 +49,20 @@ function addGradeInputs(parentGrInput){
         gradeDiv.id = grInput;
         console.log("New ID: " + gradeDiv.id)
         
-        grades.insertBefore(gradeDiv, parent)
+        parent.after(gradeDiv);
+        //let gradeContainer = document.getElementById("grades");
+        //grades.insertBefore(gradeDiv, parent)
+        //insertAfter(gradeDiv, gradeContainer);
     }
 };
 
-function insertAfter(referenceNode, newNode) {
+function insertAfter(newNode, existingNode) {
+    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
+
+/*function insertAfter(referenceNode, newNode) {
     referenceNode.previousSibling.insertBefore(newNode, referenceNode.nextSibling);
-  }
+  }*/
 
 function removeGradeInputs(grInput){
     //deal with all inputs disappearing after minusing them all XD
