@@ -59,14 +59,20 @@ function removeGradeInputs(gradeInput){
 
 function calcGrade(){
     let grades = [];
+    let weights = [];
+    let weightedSum = 0
 
-    gradesLen = document.getElementsByClassName("grade-input").length;
-    for (let grade = 0; grade < gradesLen; grade++){
-        grades[grade] = Number(document.getElementsByClassName("grade-input")[grade].value);
+    let gradesLen = document.getElementsByClassName("grade-input").length;
+    for (let index = 0; index < gradesLen; index++){
+        grades[index] = Number(document.getElementsByClassName("grade-input")[index].value);
+        weights[index] = Number(document.getElementsByClassName("weight-input")[index].value)/100; //convert weight percentage to decimal for easier calculation
     };
-    console.log(grades);
-    const gradeSum = grades.reduce((a, b) => a+b);
-    const avg = gradeSum/grades.length;
-    const roundedAvg = Math.round((avg + Number.EPSILON) * 100) / 100; //round to 2dp
-    document.getElementById("grade-output").innerHTML = "Grade: " + roundedAvg;
+
+    for(let index = 0; index<gradesLen; index++){
+        weightedSum += grades[index]*weights[index]
+    }
+
+    //const avg = weightedSum/grades.length;
+    //const roundedAvg = Math.round((avg + Number.EPSILON) * 100) / 100; //round to 2dp
+    document.getElementById("grade-output").innerHTML = "Grade: " + weightedSum;
 }
