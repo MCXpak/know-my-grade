@@ -50,7 +50,7 @@ main {
 }
 
 h1 { grid-area: logo;}
-.test1  { grid-area: about;}
+.about  { grid-area: about;}
 .test2 {grid-area: info;}
 
 .input-titles {
