@@ -48,24 +48,34 @@
 
     <main>
         <h1>KNOWMYGRADE</h1>
-        <div class="input-titles">
-            <div class="title-mark">Mark</div><div class="title-weight">Weight</div><div class="title-credit">Credit</div>
-        </div>
-        <div id="grades">
-            <div id="gradeInput1" class="grade-div">
-                <div class="inputs">
-                    <input type="text" class="grade-input" placeholder="0-100"><input type="text" class="weight-input" placeholder="%"><input type="text" class="grade-credit" placeholder="15">
+        <p class="about">Welcome to KnowMyGrade, this website is will quickly help you work out your weighted grades.</p>
+        <div id="calc-div">
+            <div class="modules">
+                <div id="module1" class="module-div">
+                    <h3 class="module-title">Module A</h3>
+                    <div class="input-titles">
+                        <div class="title-mark">Mark</div><div class="title-weight">Weight</div><div class="title-credit">Credit</div>
+                    </div>
+                    <div id="grades">
+                        <div id="gradeInput1" class="grade-div">
+                            <div class="inputs">
+                                <input type="text" class="grade-input" placeholder="0-100"><input type="text" class="weight-input" placeholder="%"><input type="text" class="grade-credit" placeholder="15">
+                            </div>
+                            <div class="grade-button"><button class="add-grade" onclick="addGradeInputs('gradeInput1')"><i class="fa-solid fa-plus"></i></button></div>
+                            <div class="grade-button"><button class="minus-grade" onclick="removeGradeInputs('gradeInput1')"><i class="fa-solid fa-minus"></i></button></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="grade-button"><button class="add-grade" onclick="addGradeInputs('gradeInput1')"><i class="fa-solid fa-plus"></i></button></div>
-                <div class="grade-button"><button class="minus-grade" onclick="removeGradeInputs('gradeInput1')"><i class="fa-solid fa-minus"></i></button></div>
+                <div>
+                    <div class="module-button"><button class="add-module" onclick=""><i class="fa-solid fa-plus"></i></button></div>
+                    <div class="module-button"><button class="minus-module" onclick=""><i class="fa-solid fa-minus"></i></button></div>
+                </div>
             </div>
         </div>
         <div class="results-div">
             <button id="calcGradeBtn" onclick="calcGrade()"><i class="fa-solid fa-calculator fa-2x"></i></button>
             <div id="grade-output">Grade: 0</div>
         </div>
-        <p class="about">Welcome to KnowMyGrade, this website is will quickly help you work out your weighted grades.
-        </p>
         </main>
 </body>
 </html>

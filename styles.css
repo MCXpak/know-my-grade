@@ -53,16 +53,6 @@ h1 { grid-area: logo;}
 .about  { grid-area: about;}
 .test2 {grid-area: info;}
 
-.input-titles {
-    /*grid-area: titles;*/
-    display: grid;
-    margin-left: -104px;
-    grid-template-columns: 202px 202px 68px;
-    grid-template-areas: 
-    "mark gweight credit";
-    
-}
-
 /*-- Navbar */
 .navbar{
     width: 5rem;
@@ -161,7 +151,7 @@ h1 { grid-area: logo;}
     opacity: 0;
 }
 
-.grade-div, .grade-button, .results-div {
+.grade-div, .grade-button, .results-div, #calc-div, .modules {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +168,7 @@ h1 { grid-area: logo;}
     transition: width 200ms ease;
 }
 
-.grade-input, .weight-input, .grade-credit, .add-grade, .minus-grade, #calcGradeBtn{
+.grade-input, .weight-input, .grade-credit, .add-grade, .minus-grade, #calcGradeBtn, .add-module, .minus-module {
     padding: 10px;
     margin: 10px;
     border: 0;
@@ -192,27 +182,27 @@ h1 { grid-area: logo;}
     text-align: center;
 }
 
-.add-grade, .minus-grade {
+.add-grade, .minus-grade, .add-module, .minus-module {
     width: 2rem;
     height: 2rem;
     transition: 100ms;
     filter: opacity(0.15);
 }
 
-.add-grade {
+.add-grade, .add-module {
     background-color: #8CB369;
 }
 
-.minus-grade {
+.minus-grade, .minus-module {
     background-color: #FE7A71;
 }
 
-.add-grade:hover, .minus-grade:hover {
+.add-grade:hover, .minus-grade:hover, .add-module:hover, .minus-module:hover {
     transform: scale(1.1);
     filter: opacity(1);
 }
 
-.add-grade:active, .minus-grade:active {
+.add-grade:active, .minus-grade:active, .add-module:active, .minus-module:active {
     transform: scale(1.2);
     filter: opacity(1);
 }
@@ -242,3 +232,27 @@ h1 { grid-area: logo;}
     grid-area: credit;
     text-align: center;
 }
+
+.input-titles {
+    /*grid-area: titles;*/
+    display: grid;
+    /*margin-left: -104px;*/
+    grid-template-columns: 202px 202px 68px;
+    grid-template-areas: 
+    "mark gweight credit";
+    
+}
+
+.module-div {
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    outline-width: 0;
+}
+
+.module-title {
+    margin-top: 0;
+}
+
