@@ -1,4 +1,5 @@
 let gradeInputCounter = 1;
+let moduleInputCounter = 1;
 
 
 function addGradeInputs(previousGradeInput){ //function to create new grade input
@@ -50,6 +51,13 @@ function addGradeInputs(previousGradeInput){ //function to create new grade inpu
     parent.after(gradeDiv);
     
 };
+
+function addModule(previousModuleInput){
+    moduleInputCounter = 1;
+    let parent = document.getElementById(previousModuleInput);
+    
+    
+}
 
 function removeGradeInputs(gradeInput){
     //deal with all inputs disappearing after minusing them all XD
