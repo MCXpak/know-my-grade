@@ -7,18 +7,18 @@ function addGradeInputs(previousGradeInput){ //function to create new grade inpu
 
     let parent = document.getElementById(previousGradeInput); 
     
-    var gradeDiv = document.createElement("div");
+    let gradeDiv = document.createElement("div");
     gradeDiv.className = "grade-div";
 
     const gradeInput = "gradeInput" + gradeInputCounter.toString();
     console.log("Next: " + gradeInput)
 
-    var inputs = document.createElement("div");
+    let inputs = document.createElement("div");
     inputs.className = "inputs"
 
-    var markInput = document.createElement("input");
-    var weightInput = document.createElement("input");
-    var creditInput = document.createElement("input");
+    let markInput = document.createElement("input");
+    let weightInput = document.createElement("input");
+    let creditInput = document.createElement("input");
     markInput.type = "text";
     weightInput.type= "text";
     creditInput.type = "text";
@@ -29,8 +29,8 @@ function addGradeInputs(previousGradeInput){ //function to create new grade inpu
     weightInput.placeholder = "%";
     creditInput.placeholder = "15"
 
-    var addGradeDiv = document.createElement("div");
-    var minusGradeDiv = document.createElement("div");
+    let addGradeDiv = document.createElement("div");
+    let minusGradeDiv = document.createElement("div");
     addGradeDiv.className = "grade-button"
     minusGradeDiv.className = "grade-button"
 
@@ -55,7 +55,9 @@ function addGradeInputs(previousGradeInput){ //function to create new grade inpu
 function addModule(previousModuleInput){
     moduleInputCounter = 1;
     let parent = document.getElementById(previousModuleInput);
-    
+    let newModule = parent.cloneNode(true);
+    newModule.id = "module2"
+    parent.after(newModule)
     
 }
 
