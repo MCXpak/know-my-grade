@@ -67,6 +67,7 @@ function removeGradeInputs(gradeInput){
     div.remove();
 }
 
+//Function to calculate grade
 function calcGrade(){
     let grades = [];
     let weights = [];

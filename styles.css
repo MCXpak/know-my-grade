@@ -191,6 +191,7 @@ h1 { grid-area: logo;}
     opacity: 0;
 }
 
+/*Grade Inputs*/
 .grade-div, .grade-button, .results-div, .modules {
     display: flex;
     align-items: center;
